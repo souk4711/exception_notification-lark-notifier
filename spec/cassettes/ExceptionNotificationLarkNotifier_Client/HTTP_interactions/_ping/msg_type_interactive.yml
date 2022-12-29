@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    body:
+      encoding: UTF-8
+      string: '{"msg_type":"interactive","card":{"elements":[{"tag":"div","text":{"content":"**西湖**，位于浙江省杭州市西湖区龙井路1号，杭州市区西部，景区总面积49平方千米，汇水面积为21.22平方千米，湖面面积为6.38平方千米。","tag":"lark_md"}}],"header":{"title":{"tag":"plain_text","content":"今日旅游推荐"}}},"timestamp":1672300630,"sign":"XSVrvoDO7z5HSZjAAfV12t3DaDI+zhI+24PaRmfgmLA="}'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - open.feishu.cn
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Tengine
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '42'
+      Connection:
+      - close
+      Date:
+      - Thu, 29 Dec 2022 07:57:44 GMT
+      Request-Id:
+      - 594c7797-d971-4d79-9b2b-461fbacae536
+      X-Lgw-Dst-Svc:
+      - aixqSHCqjvXKxaS5obhVF2ErH6HxYCFdacrCHhVMGgiK6CtyF-bcUptcupDwLz1UYwBLBJcUcIw492s9YrDxTI8hHq55TmTxr3LqNYDMYAFp-q9lamo2obBynVCbXWisDXYgPFD2tOMCurGjdfE=
+      X-Request-Id:
+      - 594c7797-d971-4d79-9b2b-461fbacae536
+      X-Tt-Logid:
+      - 202212291557432F4B08D51265700370D9
+      Server-Timing:
+      - cdn-cache;desc=MISS,edge;dur=22,origin;dur=354
+      - inner; dur=250
+      X-Tt-Trace-Host:
+      - 010bcd707d61a8d205b2a9eae8c4971af4849094f06ba4d7aed31a3984a9ed8d8fc38ecf2be7ac5e479e26b416bf9853b2ac2522a592de28bbbc7b3ad643880ebeb9daeedbaa6b48b000cb830747e843c355a24c54190ec350fa8fa4bc6ac91281
+      X-Tt-Trace-Tag:
+      - id=03;cdn-cache=miss;type=dyn
+      X-Timestamp:
+      - '1672300664.195'
+      Via:
+      - cache42.l2cn2600[354,0], ens-vcache12.cn5142[376,0]
+      Timing-Allow-Origin:
+      - "*"
+      Eagleid:
+      - 74fd1ca016723006638403901e
+    body:
+      encoding: UTF-8
+      string: '{"StatusCode":0,"StatusMessage":"success"}'
+  recorded_at: Thu, 29 Dec 2022 07:57:11 GMT
+recorded_with: VCR 6.1.0

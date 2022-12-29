@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    body:
+      encoding: UTF-8
+      string: '{"msg_type":"post","content":{"post":{"zh_cn":{"title":"项目更新通知","content":[[{"tag":"text","text":"项目有更新:
+        "},{"tag":"a","text":"请查看","href":"http://www.example.com/"}]]}}},"timestamp":1672300629,"sign":"d/uZPBZqVidScJdFLihsj6WCqfWT1XD1EuFy3sa+d9E="}'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - open.feishu.cn
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Tengine
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '42'
+      Connection:
+      - close
+      Date:
+      - Thu, 29 Dec 2022 07:57:42 GMT
+      Request-Id:
+      - 7627150d-6e02-434e-aba4-64b7f17f5e46
+      X-Lgw-Dst-Svc:
+      - nMdXd46VpT4jkvAxYfLQgAfLjK4aYmP3x_zqzRnVSXIisiAh3T_DqvtfF9PN4lUXmev2Yht940CdF5NLTMCi6pTicv6NbH4EWA2Qt438kNMzo2LyNtTygpRWMl-OJtdPPbZ4zS1AEkETKw5086M=
+      X-Request-Id:
+      - 7627150d-6e02-434e-aba4-64b7f17f5e46
+      X-Tt-Logid:
+      - 20221229155742DB1CED184DE926029488
+      Server-Timing:
+      - cdn-cache;desc=MISS,edge;dur=18,origin;dur=289
+      - inner; dur=243
+      X-Tt-Trace-Host:
+      - 010bcd707d61a8d205b2a9eae8c4971af4c943444ab6cbdade784d87e3bd386f0f57e3b97faefd2ea63060b1ccdc9ff0abd0b63c20a392ab870a014f161c6e2d9aa4445133d62977bb2302e6bcea9c9502bac5644360ca02e683a1c912edb69c04
+      X-Tt-Trace-Tag:
+      - id=03;cdn-cache=miss;type=dyn
+      X-Timestamp:
+      - '1672300662.433'
+      Via:
+      - cache61.l2cn2600[289,0], vcache6.cn5374[307,0]
+      Timing-Allow-Origin:
+      - "*"
+      Eagleid:
+      - 740b7c9a16723006621545133e
+    body:
+      encoding: UTF-8
+      string: '{"StatusCode":0,"StatusMessage":"success"}'
+  recorded_at: Thu, 29 Dec 2022 07:57:09 GMT
+recorded_with: VCR 6.1.0

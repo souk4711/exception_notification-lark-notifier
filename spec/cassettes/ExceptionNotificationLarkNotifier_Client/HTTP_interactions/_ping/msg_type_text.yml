@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    body:
+      encoding: UTF-8
+      string: '{"msg_type":"text","content":{"text":"Hello World"},"timestamp":1672300628,"sign":"XjXYFAg/syJ9d1Ac6vNOmhEDZgIDmzg9aKkJMjdyStY="}'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - open.feishu.cn
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Tengine
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '42'
+      Connection:
+      - close
+      Date:
+      - Thu, 29 Dec 2022 07:57:41 GMT
+      Request-Id:
+      - 96d87c79-412f-4ba2-bb17-2801a9542c25
+      X-Lgw-Dst-Svc:
+      - 0KNAZBhAwZgH2rNaj36NFQRe__hgAC0rGeVx-4LpV9NzjMuRFkG-1-J5WH12RpLHaUKrbhJLvlcpjPlteNNp_9Mv5lKzbC6bEiSSk2vsrSObq81fGMEcbiu4nPxUlhXEocNK8uh-odIdo51UhiY=
+      X-Request-Id:
+      - 96d87c79-412f-4ba2-bb17-2801a9542c25
+      X-Tt-Logid:
+      - 202212291557415E2D3F0BA675D203DF84
+      Server-Timing:
+      - cdn-cache;desc=MISS,edge;dur=20,origin;dur=237
+      - inner; dur=209
+      X-Tt-Trace-Host:
+      - 010bcd707d61a8d205b2a9eae8c4971af4d38e261707d2150e0df9adcd6d8a56e99dfa904ba1a35fea43d16e903304f3461af6ec658cd79920012ec4df1bcafb8406985ccd7af5a90ae2732d9787575b3313367865db394bc4f932631bf71fece5
+      X-Tt-Trace-Tag:
+      - id=03;cdn-cache=miss;type=dyn
+      X-Timestamp:
+      - '1672300661.590'
+      Via:
+      - cache25.l2cn2600[237,0], vcache3.cn5374[257,0]
+      Timing-Allow-Origin:
+      - "*"
+      Eagleid:
+      - 740b7c9716723006613581248e
+    body:
+      encoding: UTF-8
+      string: '{"StatusCode":0,"StatusMessage":"success"}'
+  recorded_at: Thu, 29 Dec 2022 07:57:08 GMT
+- request:
+    method: post
+    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    body:
+      encoding: UTF-8
+      string: '{"msg_type":"text","content":{"text":"Hello World"},"timestamp":1672300628,"sign":"XjXYFAg/syJ9d1Ac6vNOmhEDZgIDmzg9aKkJMjdyStY="}'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - open.feishu.cn
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Tengine
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '42'
+      Connection:
+      - close
+      Date:
+      - Thu, 29 Dec 2022 07:57:41 GMT
+      Request-Id:
+      - 5c16fb27-1ee0-42cd-8df2-89fd5e590b0e
+      X-Lgw-Dst-Svc:
+      - PX-3AeXBaWfbZ-AHEROrBXviCjIOU6jz1kuR2cL09pjooxPYfh6zKe6fU5xusmFTH3HfpPNy6ZVywpqyT1RoeHxyn9EYqUqwvwDUDcKsGitG_iy_wSzkcyzuOvWwANkvpCL3Pt0V3IO-lCSn1aU=
+      X-Request-Id:
+      - 5c16fb27-1ee0-42cd-8df2-89fd5e590b0e
+      X-Tt-Logid:
+      - 20221229155741F4F18AA38161CD03E42B
+      Server-Timing:
+      - cdn-cache;desc=MISS,edge;dur=15,origin;dur=250
+      - inner; dur=219
+      X-Tt-Trace-Host:
+      - 010bcd707d61a8d205b2a9eae8c4971af41282b27278a36035db00ad80856b47aad106d3ecdc8088efc3ccc08cc17215125029556a7040a83b073b4cde6fb5f1b92b957327ff245818b9c880c71127927309eb019a9c0fcc472ad7afdaee987d5a
+      X-Tt-Trace-Tag:
+      - id=03;cdn-cache=miss;type=dyn
+      X-Timestamp:
+      - '1672300661.987'
+      Via:
+      - cache36.l2cn2600[250,0], vcache6.cn5374[265,0]
+      Timing-Allow-Origin:
+      - "*"
+      Eagleid:
+      - 740b7c9a16723006617393029e
+    body:
+      encoding: UTF-8
+      string: '{"StatusCode":0,"StatusMessage":"success"}'
+  recorded_at: Thu, 29 Dec 2022 07:57:09 GMT
+recorded_with: VCR 6.1.0

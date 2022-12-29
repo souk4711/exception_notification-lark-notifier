@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
+    body:
+      encoding: UTF-8
+      string: '{"msg_type":"interactive","card":{"header":{"title":{"tag":"plain_text","content":"Exception
+        Occurred"}},"elements":[{"tag":"div","text":{"tag":"lark_md","content":"*A*
+        **ZeroDivisionError** *occured in background*\n --------------\n"},"fields":[{"is_short":false,"text":{"tag":"lark_md","content":"**Message:**"}},{"is_short":false,"text":{"tag":"plain_text","content":"divided
+        by 0"}},{"is_short":false,"text":{"tag":"lark_md","content":"\n"}},{"is_short":false,"text":{"tag":"lark_md","content":"**Backtrace:**"}},{"is_short":false,"text":{"tag":"plain_text","content":"/home/johndoe/Code/GitHub/souk4711/exception_notification-lark-notifier/spec/exception_notifier/lark_notifier_spec.rb:3:in
+        `/''\n/home/johndoe/Code/GitHub/souk4711/exception_notification-lark-notifier/spec/exception_notifier/lark_notifier_spec.rb:3:in
+        `fake_exception''\n/home/johndoe/Code/GitHub/souk4711/exception_notification-lark-notifier/spec/exception_notifier/lark_notifier_spec.rb:18:in
+        `block (4 levels) in <top (required)>''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/matchers/built_in/raise_error.rb:59:in
+        `matches?''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/matchers/built_in/raise_error.rb:81:in
+        `does_not_match?''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/handler.rb:90:in
+        `does_not_match?''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/handler.rb:79:in
+        `block in handle_matcher''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/handler.rb:27:in
+        `with_matcher''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/handler.rb:76:in
+        `handle_matcher''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/expectation_target.rb:78:in
+        `not_to''"}},{"is_short":false,"text":{"tag":"lark_md","content":"\n"}},{"is_short":false,"text":{"tag":"lark_md","content":"**Data:**"}},{"is_short":false,"text":{"tag":"plain_text","content":"current_user:
+        {:id=>1, :name=>\"John Doe\"}"}},{"is_short":false,"text":{"tag":"lark_md","content":"\n"}}]}]},"timestamp":1672315157,"sign":"i0vsPkzYS5RazKby5jrPr63LJPWiYsODXQTICTyCDH0="}'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - open.feishu.cn
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Tengine
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '42'
+      Connection:
+      - close
+      Date:
+      - Thu, 29 Dec 2022 11:59:50 GMT
+      Request-Id:
+      - ef731f93-1601-404a-a43e-2acf91a62959
+      X-Lgw-Dst-Svc:
+      - Mh8xCZvHE3-GPzSQoXmEhdm2xUkFiYQZ9kufF_Y84pj3zkX-aKAnBAndfbsUKqKCnp5chjA3qm4IOgHhmrRTT44A1UxA8WJ4CkTkQIgh3nst9_mGDcsecGsZl2zRvY5aMsps3WcvCl9iGQPwg3w=
+      X-Request-Id:
+      - ef731f93-1601-404a-a43e-2acf91a62959
+      X-Tt-Logid:
+      - 2022122919595036F4E55FDAD95A1F3BDF
+      Server-Timing:
+      - cdn-cache;desc=MISS,edge;dur=13,origin;dur=405
+      - inner; dur=235
+      X-Tt-Trace-Host:
+      - 010bcd707d61a8d205b2a9eae8c4971af4822068019845843458c6b02142d7ca50f1987ede2ce6f0fe43b6e04102e97d1d1286f05c28a2a2eba7dd00017c3ba0b8c6fd3c6eb704e533e9b90187c1aef2764322c1d1683db6000bc5fd419886f8cf
+      X-Tt-Trace-Tag:
+      - id=03;cdn-cache=miss;type=dyn
+      X-Timestamp:
+      - '1672315190.660'
+      Via:
+      - cache28.l2st4-5[405,0], cache17.cn3062[418,0]
+      Timing-Allow-Origin:
+      - "*"
+      Eagleid:
+      - 717165a716723151902715366e
+    body:
+      encoding: UTF-8
+      string: '{"StatusCode":0,"StatusMessage":"success"}'
+  recorded_at: Thu, 29 Dec 2022 11:59:17 GMT
+recorded_with: VCR 6.1.0

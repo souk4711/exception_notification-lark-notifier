@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
+    body:
+      encoding: UTF-8
+      string: '{"msg_type":"interactive","card":{"header":{"title":{"tag":"plain_text","content":"Exception
+        Occurred"}},"elements":[{"tag":"div","text":{"tag":"lark_md","content":"*A*
+        **ZeroDivisionError** *occurred while* **GET https://example.com/path/to/page?name=ferret&color=purple**\n
+        --------------\n"},"fields":[{"is_short":false,"text":{"tag":"lark_md","content":"**Message:**"}},{"is_short":false,"text":{"tag":"plain_text","content":"divided
+        by 0"}},{"is_short":false,"text":{"tag":"lark_md","content":"\n"}},{"is_short":false,"text":{"tag":"lark_md","content":"**Backtrace:**"}},{"is_short":false,"text":{"tag":"plain_text","content":"/home/johndoe/Code/GitHub/souk4711/exception_notification-lark-notifier/spec/exception_notifier/lark_notifier_spec.rb:3:in
+        `/''\n/home/johndoe/Code/GitHub/souk4711/exception_notification-lark-notifier/spec/exception_notifier/lark_notifier_spec.rb:3:in
+        `fake_exception''\n/home/johndoe/Code/GitHub/souk4711/exception_notification-lark-notifier/spec/exception_notifier/lark_notifier_spec.rb:29:in
+        `block (4 levels) in <top (required)>''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/matchers/built_in/raise_error.rb:59:in
+        `matches?''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/matchers/built_in/raise_error.rb:81:in
+        `does_not_match?''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/handler.rb:90:in
+        `does_not_match?''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/handler.rb:79:in
+        `block in handle_matcher''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/handler.rb:27:in
+        `with_matcher''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/handler.rb:76:in
+        `handle_matcher''\n/home/johndoe/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/rspec-expectations-3.12.1/lib/rspec/expectations/expectation_target.rb:78:in
+        `not_to''"}},{"is_short":false,"text":{"tag":"lark_md","content":"\n"}},{"is_short":false,"text":{"tag":"lark_md","content":"**Data:**"}},{"is_short":false,"text":{"tag":"plain_text","content":"current_user:
+        {:id=>1, :name=>\"John Doe\"}"}},{"is_short":false,"text":{"tag":"lark_md","content":"\n"}}]}]},"timestamp":1672315157,"sign":"i0vsPkzYS5RazKby5jrPr63LJPWiYsODXQTICTyCDH0="}'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=UTF-8
+      Host:
+      - open.feishu.cn
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Tengine
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '42'
+      Connection:
+      - close
+      Date:
+      - Thu, 29 Dec 2022 11:59:51 GMT
+      Request-Id:
+      - 63e85680-77a4-4123-8e86-cb13d380d6f1
+      X-Lgw-Dst-Svc:
+      - 8eumEyoFgcuhxIfBEiykjmrdwt3ijQgTpoNssbkdDZd-37iWKzGNFibrXIJrcx3ubes0rNsLLp-eiKgZYikZHpsX8fZi_MCRb5mz0XLqdW_av7LGBybID-VkN_TjF4ldzg3B5-gDzq6icOl5LzQ=
+      X-Request-Id:
+      - 63e85680-77a4-4123-8e86-cb13d380d6f1
+      X-Tt-Logid:
+      - 202212291959501A96ED4079433A1478F0
+      Server-Timing:
+      - cdn-cache;desc=MISS,edge;dur=52,origin;dur=337
+      - inner; dur=312
+      X-Tt-Trace-Host:
+      - 010bcd707d61a8d205b2a9eae8c4971af4dbc0d43e373facaf764ed770fa13aa09eb21a45518bb48ae6629d9c11f8426988c0e17a982b5388e5126cccdb8bad1463d0ef18fd289a1ac469813448ec6bd6dc8fabf4e060416e862bbaa6ddaa6a1f3
+      X-Tt-Trace-Tag:
+      - id=03;cdn-cache=miss;type=dyn
+      X-Timestamp:
+      - '1672315191.133'
+      Via:
+      - cache26.l2na63-1[337,0], cache15.cn3062[389,0]
+      Timing-Allow-Origin:
+      - "*"
+      Eagleid:
+      - 717165a516723151907737852e
+    body:
+      encoding: UTF-8
+      string: '{"StatusCode":0,"StatusMessage":"success"}'
+  recorded_at: Thu, 29 Dec 2022 11:59:18 GMT
+recorded_with: VCR 6.1.0

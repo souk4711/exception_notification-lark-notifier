@@ -41,7 +41,7 @@ module ExceptionNotifier
 
       unless backtrace.empty?
         fields << {is_short: false, text: {tag: "lark_md", content: "**Backtrace:**"}}
-        fields << {is_short: false, text: {tag: "plain_text", content: backtrace}}
+        fields << {is_short: false, text: {tag: "plain_text", content: backtrace.first(10).join("\n")}}
         fields << {is_short: false, text: {tag: "lark_md", content: "\n"}}
       end
 
@@ -67,7 +67,7 @@ module ExceptionNotifier
       env = options[:env]
       if env.nil?
         data = options[:data] || {}
-        text = "#{exception_name} *occured in background*\n"
+        text = "#{exception_name} *occured in background*"
       else
         data = (env["exception_notifier.exception_data"] || {}).merge(options[:data] || {})
         kontroller = env["action_controller.instance"]

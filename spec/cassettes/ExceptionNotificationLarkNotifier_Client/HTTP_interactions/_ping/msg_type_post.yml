@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
     body:
       encoding: UTF-8
       string: '{"msg_type":"post","content":{"post":{"zh_cn":{"title":"项目更新通知","content":[[{"tag":"text","text":"项目有更新:

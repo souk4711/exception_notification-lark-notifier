@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
     body:
       encoding: UTF-8
       string: '{"msg_type":"image","content":{"image_key":"img_ecffc3b9-8f14-400f-a014-05eca1a4310g"},"timestamp":1672300629,"sign":"d/uZPBZqVidScJdFLihsj6WCqfWT1XD1EuFy3sa+d9E="}'

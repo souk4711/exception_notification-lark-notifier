@@ -32,9 +32,34 @@ To configure it, you need to set the webhook address, like this:
 ```ruby
 Rails.application.config.middleware.use ExceptionNotification::Rack,
   lark: {
-    webhook: 'https://open.larksuite.com/open-apis/bot/v2/hook/xxxxxxxxxxxxxxxxx'
+    webhook_url: 'https://open.larksuite.com/open-apis/bot/v2/hook/xxxxxxxxxxxxxxxxx',
+    webhook_secret: '123456',
+    http: {
+      timeout_class: HTTP::Timeout::Global,
+      timeout_options: {global_timeout: 5}
+    }
   }
 ```
+
+### Options
+
+#### webhook_url
+
+*String, required*
+
+The Incoming WebHook URL on Lark.
+
+#### webhook_secret
+
+*String, optional*
+
+The secret key for *Signature validation*.
+
+#### http
+
+*Hash, optional*
+
+Configure the HTTP client.
 
 
 ## Development

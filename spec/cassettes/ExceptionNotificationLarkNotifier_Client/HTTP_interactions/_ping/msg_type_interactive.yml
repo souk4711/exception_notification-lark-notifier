@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
     body:
       encoding: UTF-8
       string: '{"msg_type":"interactive","card":{"elements":[{"tag":"div","text":{"content":"**西湖**，位于浙江省杭州市西湖区龙井路1号，杭州市区西部，景区总面积49平方千米，汇水面积为21.22平方千米，湖面面积为6.38平方千米。","tag":"lark_md"}}],"header":{"title":{"tag":"plain_text","content":"今日旅游推荐"}}},"timestamp":1672300630,"sign":"XSVrvoDO7z5HSZjAAfV12t3DaDI+zhI+24PaRmfgmLA="}'

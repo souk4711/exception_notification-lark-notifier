@@ -3,7 +3,7 @@ module ExceptionNotificationLarkNotifier
     def initialize(options)
       @secret = options[:webhook_secret].to_s.strip
       @http = Http.new(
-        uri: options.fetch(:webhook),
+        uri: options.fetch(:webhook_url),
         options: options[:http] || {}
       )
     end

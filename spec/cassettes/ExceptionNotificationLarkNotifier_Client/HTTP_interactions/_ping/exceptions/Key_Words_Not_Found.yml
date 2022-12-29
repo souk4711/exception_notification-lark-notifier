@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
     body:
       encoding: UTF-8
       string: '{"msg_type":"text","content":{"text":"Hello World"},"timestamp":1672299830,"sign":"WV8oiw2+mDBBuJBwCaOdf6Od948IjiIiTwCtWYtAbWQ="}'

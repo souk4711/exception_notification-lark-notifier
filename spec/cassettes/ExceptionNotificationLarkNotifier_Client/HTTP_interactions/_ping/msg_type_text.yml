@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
     body:
       encoding: UTF-8
       string: '{"msg_type":"text","content":{"text":"Hello World"},"timestamp":1672300628,"sign":"XjXYFAg/syJ9d1Ac6vNOmhEDZgIDmzg9aKkJMjdyStY="}'
@@ -59,7 +59,7 @@ http_interactions:
   recorded_at: Thu, 29 Dec 2022 07:57:08 GMT
 - request:
     method: post
-    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
     body:
       encoding: UTF-8
       string: '{"msg_type":"text","content":{"text":"Hello World"},"timestamp":1672300628,"sign":"XjXYFAg/syJ9d1Ac6vNOmhEDZgIDmzg9aKkJMjdyStY="}'

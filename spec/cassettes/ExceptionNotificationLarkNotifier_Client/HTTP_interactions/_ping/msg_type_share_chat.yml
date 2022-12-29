@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: "<LARK_NOTIFIER_WEBHOOK>"
+    uri: "<LARK_NOTIFIER_WEBHOOK_URL>"
     body:
       encoding: UTF-8
       string: '{"msg_type":"share_chat","content":{"share_chat_id":"oc_f5b1a7eb27ae2c7b6adc2a74faf339ff"},"timestamp":1672300630,"sign":"XSVrvoDO7z5HSZjAAfV12t3DaDI+zhI+24PaRmfgmLA="}'

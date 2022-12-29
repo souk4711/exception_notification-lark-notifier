@@ -1,7 +1,7 @@
 RSpec.describe ExceptionNotificationLarkNotifier::Client do
   subject do
     described_class.new(
-      webhook: ENV["LARK_NOTIFIER_WEBHOOK"],
+      webhook_url: ENV["LARK_NOTIFIER_WEBHOOK_URL"],
       webhook_secret: ENV["LARK_NOTIFIER_WEBHOOK_SECRET"]
     )
   end
@@ -91,7 +91,7 @@ RSpec.describe ExceptionNotificationLarkNotifier::Client do
     it "timeout" do
       allow(TCPSocket).to receive(:open) { sleep 2.5 }
       client = described_class.new(
-        webhook: ENV["LARK_NOTIFIER_WEBHOOK"],
+        webhook_url: ENV["LARK_NOTIFIER_WEBHOOK_URL"],
         webhook_secret: ENV["LARK_NOTIFIER_WEBHOOK_SECRET"],
         http: {
           timeout_class: HTTP::Timeout::Global,

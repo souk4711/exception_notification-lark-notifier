@@ -71,7 +71,7 @@ module ExceptionNotifier
       else
         data = (env["exception_notifier.exception_data"] || {}).merge(options[:data] || {})
         kontroller = env["action_controller.instance"]
-        request = "#{env["REQUEST_METHOD"]} <#{env["REQUEST_URI"]}>"
+        request = "#{env["REQUEST_METHOD"]} #{env["REQUEST_URI"]}"
         text = "#{exception_name} *occurred while* **#{request}**"
         text += " *was processed by* **#{kontroller.controller_name}##{kontroller.action_name}**" if kontroller
       end

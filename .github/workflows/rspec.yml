@@ -19,6 +19,9 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+      - name: Make envfile
+        run: |
+          cp .env.defaults .env
       - name: Run Test
         run: |
           ruby -v

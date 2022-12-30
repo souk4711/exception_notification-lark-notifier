@@ -55,6 +55,18 @@ The Incoming WebHook URL on Lark.
 
 The secret key for *Signature validation*.
 
+#### app_name
+
+*String, optional*
+
+Your application name, shown in the notification.
+
+#### env_name
+
+*String, optional*
+
+Your env name, shown in the notification.
+
 #### http
 
 *Hash, optional*

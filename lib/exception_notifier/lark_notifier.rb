@@ -11,8 +11,8 @@ module ExceptionNotifier
 
     def call(exception, options = {})
       title = @default_appname ? "Exception Occurred in #{@default_appname}" : "Exception Occurred"
-      clean_message = exception.message.tr("`", "'")
-      backtrace = exception.backtrace ? clean_backtrace(exception) : ""
+      clean_message = exception.message
+      backtrace = exception.backtrace ? clean_backtrace(exception) : []
       info, data = information_from_options(exception.class, options)
       fields = fields(clean_message, backtrace, data)
 

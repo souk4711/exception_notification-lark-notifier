@@ -21,7 +21,7 @@ module ExceptionNotificationLarkNotifier
       parse_response(response) do |parse_as, result|
         case parse_as
         when :json
-          break result if result["StatusCode"] == 0
+          break result if result["StatusCode"] == 0 || result["code"] == 0
           raise ExceptionNotificationLarkNotifier::Exceptions::APIError, result["msg"]
         else
           result
